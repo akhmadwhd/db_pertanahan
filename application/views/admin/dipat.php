@@ -23,44 +23,46 @@
             <div class="row">
                 <div class="col-2">
                     <div class="sidebar container">
-                        <img src="img/logo1.png" class="rounded mx-auto d-block" alt="">
+                        <img src="../assets/img/logo1.png" class="rounded mx-auto d-block" alt="">
                         <div class="container mt-3">
                             <p class="text-center lh-base text-secondary fw-bold fs-6">DINAS PERUMAHAN KAWASAN PERMUKIMAN DAN PERTAHANAN</p>
                         </div>
                         <div class="sidebar container">
-                            <img src="img/logo1.png" class="rounded mx-auto d-block" alt="">
+                            <img src="../assets/img/logo1.png" class="rounded mx-auto d-block" alt="">
                             <div class="container mt-3">
                                 <p class="text-center lh-base text-secondary fw-bold fs-6">DINAS PERUMAHAN KAWASAN PERMUKIMAN DAN PERTAHANAN</p>
                             </div>
                             <div class="d-grid gap-2 mt-5">
-                                <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
-                                    <img src="img/icon/dashboard.svg" alt="" class="icon">
-                                    &emsp;Dashboard
-                                </button>
+                                <a href="<?= base_url('User/ProfileController'); ?>">
+                                  <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
+                                      <img src="../assets/img/icon/dashboard.svg" alt="" class="icon">
+                                      &emsp;Dashboard
+                                  </button>
+                                </a>
                                 <a href="<?= base_url('Admin/dipatcontroller'); ?>">
                                   <button type="button" class="btn btn-primary text-start w-100 fs-6 btn-lg">
-                                    <img src="img/icon/DIP4T-white.svg" alt="" class="icon">
+                                    <img src="../assets/img/icon/DIP4T-white.svg" alt="" class="icon">
                                     &emsp; DIP4T
                                   </button>
                                 </a>
 
                                 <a href="<?= base_url('Admin/grlcontroller'); ?>">
                                   <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
-                                    <img src="img/icon/gantirugilahan.svg" alt="" class="icon">
+                                    <img src="../assets/img/icon/gantirugilahan.svg" alt="" class="icon">
                                     &emsp; Ganti Rugi Lahan
                                   </button>
                                 </a>
 
                                 <a href="<?= base_url('Admin/LaporanController'); ?>">
                                   <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
-                                    <img src="img/icon/laporan.svg" alt="" class="icon">
+                                    <img src="../assets/img/icon/laporan.svg" alt="" class="icon">
                                     &emsp; Laporan
                                   </button>
                                 </a>
 
                                 <a href="<?= base_url('Admin/PetugasController'); ?>">
                                   <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
-                                    <img src="img/icon/user.svg" alt="" class="icon">
+                                    <img src="../assets/img/icon/user.svg" alt="" class="icon">
                                     &emsp; Users
                                   </button>
                                 </a>
@@ -82,7 +84,7 @@
                         <div id="carouselExampleCaptions" class="carousel slide text-start">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="img/icon/header.svg" class="d-block w-100" alt="...">
+                                    <img src="../assets/img/icon/header.svg" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5 class="text-bold fs-3 fw-bold">Data Dan Informasi Penguasaan, Pemilikan,
                                             <br>Penggunaan, Dan Pemanfaatan Tanah(DIP4T)</h5>
@@ -159,9 +161,9 @@
                                               <td><?= $dipat['penggunaan_bidang_tanah']; ?></td>
                                               <td>
                                                   <!-- Tambahkan tiga tombol ikon di sini -->
-                                                  <img src="img/icon/see.svg" alt="Info" data-bs-toggle="modal" data-bs-target="#viewModal" onclick="infoFunction()">
-                                                  <img src="img/icon/edit.svg" alt="Edit" onclick="seeFunction()">
-                                                  <img src="img/icon/trash.svg" alt="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="deletFunction()">
+                                                  <img src="../assets/img/icon/see.svg" alt="Info" data-bs-toggle="modal" data-bs-target="#viewModal" onclick="infoFunction()">
+                                                  <img src="../assets/img/icon/edit.svg" alt="Edit" onclick="seeFunction()">
+                                                  <img src="../assets/img/icon/trash.svg" alt="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="deletFunction()">
                                               </td>
                                           </tr>
                                       <?php endforeach; ?>

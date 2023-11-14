@@ -13,7 +13,7 @@
         /* Mengatur tinggi gambar agar penuh di bagian kanan */
         .full-image {
             height: 100vh;
-            background-image: url('C:\xampp\htdocs\db_pertanahan\assets\img\loginpageimage.png'); /* Sesuaikan path gambar sesuai dengan struktur folder Anda */
+            background-image: url('../assets/img/loginpageimage.png'); /* Sesuaikan path gambar sesuai dengan struktur folder Anda */
             background-size: cover;
             background-position: center;
         }
