@@ -15,21 +15,13 @@ class ProfileController extends CI_Controller {
 	{
         $data['title'] = 'Profile';
 
-        $masyarakat = $this->db->get_where('masyarakat',['username' => $this->session->userdata('username')])->row_array();
-		$petugas = $this->db->get_where('petugas',['username' => $this->session->userdata('username')])->row_array();
+        $user = $this->db->get_where('tb_user',['username' => $this->session->userdata('username')])->row_array();
 
-		if ($masyarakat == TRUE) :
-			$data['user'] = $masyarakat;
-		elseif ($petugas == TRUE) :
-			$data['user'] = $petugas;
+		if ($user == TRUE) :
+			$data['user'] = $user;
 		endif;
 
-        $this->load->view('_part/backend_head', $data);
-        $this->load->view('_part/backend_sidebar_v');
-        $this->load->view('_part/backend_topbar_v');
-        $this->load->view('user/profile');
-        $this->load->view('_part/backend_footer_v');
-        $this->load->view('_part/backend_foot');
+        $this->load->view('user/profile', $data);
 	}
 }
 

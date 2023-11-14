@@ -1,7 +1,7 @@
 <footer class="sticky-footer bg-white">
   <div class="container my-auto">
     <div class="copyright text-center my-auto">
-      <span>Copyright &copy; PUPRD KABUPATEN MOROWALI <?= date('Y') ?></a>
+      <span>Copyright &copy; Dinas Perumahan Kawasan Permukiman Dan Pertanahan Kabupaten Morowali <?= date('Y') ?></a>
       </span>
     </div>
   </div>

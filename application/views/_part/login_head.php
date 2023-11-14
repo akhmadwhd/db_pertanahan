@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Tambahkan Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Mengatur tinggi gambar agar penuh di bagian kanan */
+        .full-image {
+            height: 100vh;
+            background-image: url('C:\xampp\htdocs\db_pertanahan\assets\img\loginpageimage.png'); /* Sesuaikan path gambar sesuai dengan struktur folder Anda */
+            background-size: cover;
+            background-position: center;
+        }
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title><?= $title ?></title>
-
-  <!-- Custom fonts for this template-->
-  <link href="<?= base_url() ?>assets/backend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="<?= base_url() ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="<?= base_url() ?>assets/backend/css/sb-admin-2.min.css" rel="stylesheet">
-
+        /* Mengatur tampilan form login di bagian kiri */
+        .login-form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Mengatur ukuran teks dan ketebalan pada "Sign In" */
+        .sign-in-text {
+            font-size: 33px;
+            font-weight: 600; /* 600 untuk semi-bold */
+        }
+        /* Mengatur ukuran teks dan ketebalan pada "Sign In" */
+        .sign-in-text {
+            font-size: 33px;
+            font-weight: 600; /* 600 untuk semi-bold */
+        }
+         /* Mengatur ukuran teks dan ketebalan teks "DINAS PERTANAHAN KABUPATEN MOROWALI" */
+         .department-text {
+            font-size: 16px;
+            font-weight: 350;
+        }
+         /* Mengatur ukuran teks dan ketebalan teks "email" */
+         .email-text{
+            font-size: 16px;
+            font-weight: 350;
+        }
+         /* Mengatur ukuran teks dan ketebalan teks "password" */
+        .password-text{
+            font-size: 16px;
+            font-weight: 350;
+        }
+    </style>
 </head>
-
-<body class="bg-gradient-primary">
+<body>

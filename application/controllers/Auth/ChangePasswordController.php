@@ -38,18 +38,17 @@ class ChangePasswordController extends CI_Controller {
 	public function change_password($passwordSekarang, $passwordBaru)
 	{
 		// cek akun di table masyarakat dan petugas berdasarkan username
-		$masyarakat = $this->db->get_where('masyarakat',['username' => $this->session->userdata('username')])->row_array();
-		$petugas = $this->db->get_where('petugas',['username' => $this->session->userdata('username')])->row_array();
+		$user = $this->db->get_where('tb_user',['username' => $this->session->userdata('username')])->row_array();
 
 		if ($masyarakat == TRUE) :
 
-			if (password_verify($passwordSekarang, $masyarakat['password'])) :
+			if (password_verify($passwordSekarang, $user['password'])) :
 
 				$params = [
 					'password' => password_hash($passwordBaru, PASSWORD_DEFAULT),
 				];
 
-				$resp = $this->db->update('masyarakat',$params,['nik' => $masyarakat['nik'] ]);
+				$resp = $this->db->update('tb_user',$params,['id' => $user['id'] ]);
 				if ($resp) :
 					$this->session->set_flashdata('msg','<div class="alert alert-primary" role="alert">
 						Ganti password berhasil!
@@ -71,44 +70,6 @@ class ChangePasswordController extends CI_Controller {
 
 				redirect('Auth/ChangePasswordController');
 			endif;
-
-		elseif ($petugas == TRUE) :
-
-			if (password_verify($passwordSekarang, $petugas['password'])) :
-
-				$params = [
-					'password' => password_hash($passwordBaru, PASSWORD_DEFAULT),
-				];
-
-				$resp = $this->db->update('petugas',$params,['id_petugas' => $petugas['id_petugas'] ]);
-				if ($resp) :
-					$this->session->set_flashdata('msg','<div class="alert alert-primary" role="alert">
-						Ganti password berhasil!
-						</div>');
-
-					redirect('Auth/ChangePasswordController');
-				else :
-					$this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert">
-						Ganti password gagal!
-						</div>');
-
-					redirect('Auth/ChangePasswordController');
-				endif;
-
-			else :
-				$this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert">
-					Password salah!
-					</div>');
-
-				redirect('Auth/ChangePasswordController');
-			endif;
-
-		else :
-			$this->session->set_flashdata('msg','<div class="alert alert-danger" role="alert">
-				Password salah!
-				</div>');
-
-			redirect('Auth/ChangePasswordController');
 		endif;
 	}
 }
