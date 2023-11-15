@@ -8,17 +8,16 @@ class LaporanController extends CI_Controller {
 		parent::__construct();
 		//Load Dependencies
 		is_logged_in();
-		if ($this->session->userdata('level') != 'admin') :
-			redirect('Auth/BlockedController');
-		endif;
-		$this->load->model('Pengaduan_m');
+
+
 	}
 
 	// List all your items
 	public function index()
 	{
+
 		$data['title'] = 'Generate Laporan';
-		$data['laporan'] = $this->Pengaduan_m->laporan_pengaduan()->result_array();
+		$data['laporan'] = $this->dipat_m->laporan_pengaduan()->result_array();
 
 		$this->load->view('_part/backend_head', $data);
 		$this->load->view('_part/backend_sidebar_v');
@@ -30,8 +29,8 @@ class LaporanController extends CI_Controller {
 
 	public function generate_laporan()
 	{
-	
-	$data['laporan'] = $this->Pengaduan_m->laporan_pengaduan()->result_array();
+
+	$data['laporan'] = $this->dipat_m->laporan_pengaduan()->result_array();
 
     $this->load->library('pdf');
 

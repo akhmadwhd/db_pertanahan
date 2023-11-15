@@ -22,8 +22,6 @@ class ChangePasswordController extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) :
 			$this->load->view('_part/backend_head', $data);
-			$this->load->view('_part/backend_sidebar_v');
-			$this->load->view('_part/backend_topbar_v');
 			$this->load->view('user/ganti_password');
 			$this->load->view('_part/backend_footer_v');
 			$this->load->view('_part/backend_foot');

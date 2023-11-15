@@ -60,7 +60,7 @@
                                   </button>
                                 </a>
 
-                                <a href="<?= base_url('Admin/PetugasController'); ?>">
+                                <a href="<?= base_url('Auth/ChangePasswordController'); ?>">
                                   <button type="button" class="btn btn-light text-start w-100 text-secondary fs-6 btn-lg">
                                     <img src="../assets/img/icon/user.svg" alt="" class="icon">
                                     &emsp; Users
